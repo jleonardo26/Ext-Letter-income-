@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador Ext-Letters (INCOME)</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <div class="contenedor">
+        <h1>Aplicacion Web Generadora de EXT-LETTER (INCOME) </h1>
+
+        <div class="datos-clientes">
+            <form>
+                <h2>Introduzca los datos del cliente</h2>
+                <label>Name:</label>
+                <input type="text" id="name"><br>
+                <label>Last Name:</label>
+                <input type="text" id="lastname"><br>
+                <label>Last 4 SSN:</label>
+                <input type="number" id="ssn"><br>
+                <label>Aplication ID:</label>
+                <input type="number" id="mkpid"><br>
+                <label>Income:</label>
+                <input type="text" id="income"><br>
+                <label>Date Signed:</label>
+                <input type="text" id="date-signed"><br>
+                
+            </form>
+            <button onclick="generar()"> <a href="#cartahecha">GENERAR CARTA</a> </button>
+            <button onclick="limpiar()">RESET</button>
+
+        </div>
+
+        <div class="ext-letter" id="cartahecha"> 
+
+            <p>Last 4 SSN: <span id="ssnSpan"></span></p>
+            <br>
+            <p>Application ID: <span id="mkpidSpan"></span> </p>
+            <br>
+            <br>
+            <br>
+            <h3>SELF-EMPLOYMENT LETTER</h3>
+            <br>
+            <br>
+            <br>
+            <p>RECIPIENT NAME: <span id="nameLastname"></span> </p>
+            <br>
+            <p>DATES COVERED:  01/01/2024 </p>
+            <br>
+            <p>THROUGH: 12/31/2024</p>
+            <br>
+            <p>HOURS WORKED PER WEEK: 40</p>
+            <br>
+            <br>
+            <br>
+            <p>ADJUSTED INCOME: <span id="incomeSpan"></span> </p>
+            <br>
+            <br>
+            <br>
+            <p>I certify that I have receipts or some type of verification on file for all income, and I will keep them on file for at least one year from the date reported. I declare and affirm under the penalties of perjury that the information has been examined by me, and to the best of my knowledge and belief, is in all things true and correct.</p>
+            <br>
+            <br>
+            <br>
+            <p>Signature: <span id="nameSpan"></span> </p>
+            <br>
+            <p>Date Signed: <span id="dateSignedSpan"></span> </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
