@@ -65,4 +65,10 @@
     color: black;
 }
 
+.btn-descargar{
+    border: 1px solid;
+    padding: 5px;
+    cursor: pointer;
+}
+
 

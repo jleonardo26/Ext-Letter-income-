@@ -6,6 +6,8 @@
     <title>Generador Ext-Letters (INCOME)</title>
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
 </head>
 <body>
     
@@ -16,9 +18,9 @@
             <form>
                 <h2>Introduzca los datos del cliente</h2>
                 <label>Name:</label>
-                <input type="text" id="name" placeholder="EJ: Juan"><br>
+                <input type="text" id="name" placeholder="EJ: Juan Jose"><br>
                 <label>Last Name:</label>
-                <input type="text" id="lastname" placeholder="EJ: Perez"><br>
+                <input type="text" id="lastname" placeholder="EJ: Perez Gomez"><br>
                 <label>Last 4 SSN:</label>
                 <input type="number" id="ssn" placeholder="EJ: 1234"><br>
                 <label>Aplication ID:</label>
@@ -29,7 +31,7 @@
                 <input type="text" id="date-signed" placeholder="EJ: Jan 01, 2024"><br>
                 
             </form>
-            <button onclick="generar()"> <a href="#cartahecha">GENERAR CARTA</a> </button>
+            <button onclick="generar()"> GENERAR CARTA </button>
             <button onclick="limpiar()">RESET</button>
 
         </div>
@@ -69,6 +71,7 @@
             <p>Date Signed: <span id="dateSignedSpan"></span> </p>
 
         </div>
+        <button onclick="descargarPDF()" class="btn-descargar">DESCARGAR PDF</button>
 
     </div>
 
