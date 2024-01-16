@@ -51,9 +51,9 @@ function descargarPDF() {
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
-    // Llama a la función html2pdf después de que la vista previa esté completamente renderizada
+    
     html2pdf(elementoParaConvertir, opciones).from(elementoParaConvertir).outputPdf().then(function(pdf) {
-        // Descargar el PDF
+        
         const blob = new Blob([pdf], { type: 'application/pdf' });
         const link = document.createElement('a');
         link.href = window.URL.createObjectURL(blob);
