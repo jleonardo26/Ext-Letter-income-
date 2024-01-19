@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador Ext-Letters</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script-immigration.js"></script>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="index.html">SELF-EMPLOYMENT LEDGER</a>
+        <a href="immigration.html">IMMIGRATION-CITIZENSHIP STATUS EXT LETTER</a>
+        <a href="ssn.html">SSN,MEDICAID,etc EXT LETTER</a>
+    </div>
+    
+    <div class="contenedor">
+        <h1>Generadora de IMMIGRATION-CITIZENSHIP STATUS EXT LETTER</h1>
+
+        <div class="datos-clientes">
+            <form>
+                <h2>Introduzca los datos del cliente</h2>
+                <label>Name:</label>
+                <input type="text" id="name" placeholder="Ej: Jose"><br>
+                <label>Last Name:</label>
+                <input type="text" id="lastname" placeholder="Ej: Perez"><br>
+                <label>D.O.B:</label>
+                <input type="text" id="dob" placeholder="Ej: Jan 01, 1980"><br>
+                <label>SSN:</label>
+                <input type="text" id="ssn" placeholder="Ej: 123-45-6789"><br>
+                <label>Aplication ID:</label>
+                <input type="text" id="mkpid" placeholder="Ej: 1478523699"><br>
+                
+                
+            </form>
+            <button onclick="generar()"> GENERAR CARTA </button>
+            <button onclick="limpiar()">RESET</button>
+
+        </div>
+
+        <div class="ext-letter" id="cartahecha"> 
+
+            <h3>IMMIGRATION/CITIZENSHIP STATUS EXT LETTER</h3>
+            <br>
+            <br>
+            <p>Application ID: <span id="mkpidSpan"></span> </p>
+            <p>First Name: <span id="nameSpan"></span> </p>
+            <p>Last Name: <span id="lastnameSpan"></span> </p>
+            <p>Date Of Birth: <span id="dobSpan"></span> </p>
+            <p>Social Security Number: <span id="ssnSpan"></span></p>
+            <br>
+            <br>
+            <p>To whom this may concerm:</p>
+            <br>
+            <br>
+            <p class="justify">This letter is respectfully requesting a 30-day extension in order 
+                for <span id="nameLastname"></span> provide the necessary documents,
+                 to prove current immigration status in the United States of America.</p>
+            <br>
+            <p class="justify">The information for <span id="nameLastname2"></span> have been received 
+                by USCIS National Customer Service Center. The information Is Currently
+                 being Reviewed.</p>
+            <br>
+            <p class="justify">If you have any questions or concerns about immigration benefits, services, 
+                filing information, or USCIS forms, please contact USCIS National Customer Center 
+                directly at 1-900-375-5283.</p>
+            <br>
+            <p>Sincerly, <span id="nameLastname3"></span> </p>
+            <br>
+
+        </div>
+        <button onclick="descargarPDF()" class="btn-descargar">DESCARGAR PDF</button>
+
+    </div>
+
+</body>
+</html>

@@ -10,9 +10,14 @@
 
 </head>
 <body>
+    <div class="nav-bar">
+        <a href="index.html">SELF-EMPLOYMENT LEDGER</a>
+        <a href="immigration.html">IMMIGRATION-CITIZENSHIP STATUS EXT LETTER</a>
+        <a href="ssn.html">SSN,MEDICAID,etc EXT LETTER</a>
+    </div>
     
     <div class="contenedor">
-        <h1>Aplicacion Web Generadora de EXT-LETTER (INCOME) </h1>
+        <h1>Generadora de SELF-EMPLOYMENT LEDGER</h1>
 
         <div class="datos-clientes">
             <form>
@@ -39,7 +44,6 @@
         <div class="ext-letter" id="cartahecha"> 
 
             <p>Last 4 SSN: <span id="ssnSpan"></span></p>
-            <br>
             <p>Application ID: <span id="mkpidSpan"></span> </p>
             <br>
             <br>
@@ -49,26 +53,24 @@
             <br>
             <br>
             <p>RECIPIENT NAME: <span id="nameLastname"></span> </p>
-            <br>
-            <p>DATES COVERED:  01/01/2024 </p>
-            <br>
-            <p>THROUGH: 12/31/2024</p>
-            <br>
+            
+            <div class="flex">
+                <p>DATES COVERED:  01/01/2024 </p>
+                <p>THROUGH: 12/31/2024</p>
+            </div>
             <p>HOURS WORKED PER WEEK: 40</p>
-            <br>
             <br>
             <br>
             <p>ADJUSTED INCOME: <span id="incomeSpan"></span> </p>
             <br>
             <br>
-            <br>
-            <p>I certify that I have receipts or some type of verification on file for all income, and I will keep them on file for at least one year from the date reported. I declare and affirm under the penalties of perjury that the information has been examined by me, and to the best of my knowledge and belief, is in all things true and correct.</p>
-            <br>
+            <p class="justify">I certify that I have receipts or some type of verification on file for all income, and I will keep them on file for at least one year from the date reported. I declare and affirm under the penalties of perjury that the information has been examined by me, and to the best of my knowledge and belief, is in all things true and correct.</p>
             <br>
             <br>
-            <p>Signature: <span id="nameSpan"></span> </p>
-            <br>
-            <p>Date Signed: <span id="dateSignedSpan"></span> </p>
+            <div class="flex">
+                <p class="flex-left">Signature: <span id="nameSpan"></span> </p>
+                <p class="flex-right">Date Signed: <span id="dateSignedSpan"></span> </p>
+            </div>
 
         </div>
         <button onclick="descargarPDF()" class="btn-descargar">DESCARGAR PDF</button>
